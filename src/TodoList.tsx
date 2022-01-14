@@ -16,15 +16,15 @@ export type PropsType = {
 
 export const TodoList = (props: PropsType) => {
     const [filter, setFilter] = useState<FilterType>('All')
-    //debugger
+
     let filteredT = props.tasks
-    //debugger
+
     if (filter === 'Active') {
         filteredT = filteredT.filter(f => f.isDone)
     }
     if (filter === 'Completed') {
         filteredT = filteredT.filter(f => !f.isDone)
-    } //debugger
+    }
     const filteredTasks = (filterValue: FilterType) => {
         setFilter(filterValue)
     }

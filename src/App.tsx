@@ -8,7 +8,7 @@ function App() {
 
     let [tasks, setTask] = useState([
         { id: 1, title: 'CSS', isDone: true },
-        { id: 2, title: 'JS', isDone: true },
+        { id: 2, title: 'JS', isDone: true }, 
         { id: 3, title: 'React', isDone: false },
     ])
 
