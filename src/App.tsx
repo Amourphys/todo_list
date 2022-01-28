@@ -27,6 +27,7 @@ function App() {
     /* const filteredTasks = (filterValue: FilterType) => {
         setFilter(filterValue)
     } */
+
     const addTask = (title: string) => {
         let newTask = { id: v1(), title: title, isDone: false }
         console.log(...tasks)
@@ -37,13 +38,19 @@ function App() {
         setTask(tasks.filter(f => f.id !== taskID))
     }
 
+    const onChandlerForIsDone = (id: string, value: boolean) => {
+        setTask(tasks.map(m=>m.id === id ? {...m,isDone:value} : m))
+    }
+
     return (
         <div className="App">
             <TodoList title={'What to learn'}
                 tasks={tasks}
                 removeTasks={removeTasks}
+
                 /*filteredTasks={onClickFilterHandler}*/
                 addTask={addTask}
+                onChandlerForIsDone={onChandlerForIsDone}
             />
         </div>
     );
