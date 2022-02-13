@@ -3,13 +3,17 @@
   display: flex;
 }
 
-.App>div {
+.App > div {
   margin-right: 50px;
 }
-.error {
-  border: red 1px solid;
+.is-done {
+  opacity: 0.5;
 }
-
-.error-message {
-  color: red;
+.active {
+  background-color: cadetblue;
+}
+.error {
+  background-color: lightpink ;
+  border: 2px solid red;
+  outline: transparent;
 }
